@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@theme {
+  --color-ink: #274c5b;
+  --color-leaf: #7eb693;
+  --color-sun: #efd372;
+  --color-mute: #525c60;
+  --color-paper: #f9f8f8;
+
+  --animate-fade-up: fade-up 0.8s ease-out both;
+  --animate-zoom-slow: zoom-slow 14s ease-out forwards;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes zoom-slow {
+    from { transform: scale(1.12); }
+    to { transform: scale(1); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+  }
+}
